@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-foo
+  cloud:
+    config:
+      uri: http://localhost:8080
+      profile: dev
+      label: master
+  rabbitmq:
+    host: 192.168.189.129
+    port: 5672
+    username: test
+    password: test

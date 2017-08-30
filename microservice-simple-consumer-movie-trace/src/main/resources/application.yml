@@ -1,0 +1,9 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: microservice-simple-consumer-movie-trace
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.sleuth: DEBUG

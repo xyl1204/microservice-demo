@@ -1,0 +1,36 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: microservice-simple-provider-user-trace
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  sleuth:
+    sampler:
+      percentage: 1.0
+  rabbitmq:
+    host: 192.168.189.129
+    port: 5672
+    username: test
+    password: test  
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    org.springframework.cloud.sleuth: DEBUG
+info:
+  app:
+    name:microservice-simple-provider-user-trace-zipkin
+    encoding:UTF-8
+  java:
+    source:1.8.0_101
+    target:1.8.0_101         

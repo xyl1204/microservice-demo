@@ -1,0 +1,17 @@
+server:
+  port: 9411
+spring:  
+  rabbitmq:
+    host: 192.168.189.129
+    port: 5672
+    username: guest
+    password: guest
+zipkin:
+  storage:
+    type: elasticsearch
+    elasticsearch:
+      cluster: elasticsearch
+      hosts: http://192.168.189.129:9200
+      index: zipkin
+      index-shards: 5
+      index-replicas: 1
