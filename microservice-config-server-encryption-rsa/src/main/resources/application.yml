@@ -8,8 +8,8 @@ spring:
       server:
         git:
           uri: https://github.com/xyl1204/config-repo.git
-          username: xyl891204@126.com
-          password: XueYunLong1912
+          username: 
+          password: 
 encrypt:
   key-store:
     location: classpath:server.jks
